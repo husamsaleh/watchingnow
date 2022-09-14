@@ -1,0 +1,77 @@
+
+:root{
+    
+    --white: #ffffff;
+    --main: black;
+    --secondary:#ffbf00;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+::selection{
+    color: rgb(255, 255, 255);
+    background-color: var(--main);
+}
+
+body{
+    background: var(--main);
+}
+
+
+nav{
+    z-index: 200;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.274);
+    
+    
+}
+#totoppls{
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index:1111; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: black ; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 22px; /* Increase font size */
+    max-width: 50px;
+    min-width: 60px;
+  }
+  
+  
+  #totoppls {
+    &:hover{    
+        background-color: var(--main-color); /* Add a dark-grey background on hover */
+    }
+  }
+
+  .carousel-item{
+    
+    img{
+        height: 100vh;
+        object-fit: cover;
+        width: 100%;
+    }
+
+  }
+  .MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+        .MultiCarousel .MultiCarousel-inner .item { float: left;}
+        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
+    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+    .MultiCarousel .leftLst { left:0; }
+    .MultiCarousel .rightLst { right:0; }
+    
+        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
+  
+  
