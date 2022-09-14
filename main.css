@@ -5,6 +5,10 @@
   --secondary-dark:#b88a01;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -69,6 +73,30 @@ nav {
   /* Add a dark-grey background on hover */
 }
 
+.search input {
+  width: 400px;
+  padding: 10px;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.61);
+  border: 1px rgba(255, 255, 255, 0.247) solid;
+  margin-right: 50px;
+}
+.search input::-webkit-input-placeholder {
+  color: var(--secondary);
+}
+.search input::-moz-placeholder {
+  color: var(--secondary);
+}
+.search input:-ms-input-placeholder {
+  color: var(--secondary);
+}
+.search input::-ms-input-placeholder {
+  color: var(--secondary);
+}
+.search input::placeholder {
+  color: var(--secondary);
+}
+
 .carousel-item img {
   height: 100vh;
   -o-object-fit: cover;
@@ -76,18 +104,106 @@ nav {
   width: 100%;
 }
 
-#movies {
+#movies, #TV {
   position: relative;
 }
-#movies h1 {
+#movies h1, #TV h1 {
   color: var(--secondary);
   text-align: center;
   position: absolute;
-  top: 100px;
+  top: 140px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   font-size: 56px;
+}
+
+.vid-c {
+  position: relative;
+}
+.vid-c video {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+}
+.vid-c .txt-v {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 222;
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.vid-c h2 {
+  font-size: 62px;
+  z-index: 222;
+  position: relative;
+  color: white;
+  text-shadow: 0px 0px 3px var(--secondary);
+}
+.vid-c .scroll-down {
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in 3s;
+  transition: all 0.5s ease-in 3s;
+}
+.vid-c .scroll-down {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #FFF;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.vid-c .scroll-down:before {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 6px);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: "";
+  border: 2px solid white;
+  border-width: 0px 0 2px 2px;
+}
+@-webkit-keyframes bounce {
+  0%, 100%, 20%, 50%, 80% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+@keyframes bounce {
+  0%, 100%, 20%, 50%, 80% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
 }
 
 .dxw {
@@ -150,6 +266,9 @@ nav {
   -webkit-transition: 1s all ease-in-out;
   transition: 1s all ease-in-out;
 }
+.MultiCarousel-inner .lol h2:hover {
+  color: var(--secondary) !important;
+}
 .MultiCarousel-inner .lol img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -162,4 +281,17 @@ nav {
 .MultiCarousel-inner .lol h2 {
   color: white;
   text-transform: capitalize;
+}
+
+.modal-body input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.modal-body button {
+  background: var(--secondary);
+  color: var(--main);
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
 }

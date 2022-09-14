@@ -22,12 +22,15 @@
         </button>
         
         <div class="collapse navbar-collapse flex-grow-0  mx-5" id="navbarSupportedContent">
+          <div class="search">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+          </div>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0  mt-3 mt-lg-1  align-items-center fs-5  " >
             <li class="nav-item">
               <a class="nav-link text-white " href="#movies">MOVIES</a>
             </li>
             <li class="nav-item mx-4">
-              <a class="nav-link text-white" href="#shows">TV SHOWS</a>
+              <a class="nav-link text-white" href="#TV">TV SHOWS</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link text-white" href="#social">SOCIAL</a>
@@ -54,7 +57,9 @@
 
 
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
+      
+
+      <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="/images/1.png" class="d-block w-100" alt="...">
           </div>
@@ -143,6 +148,86 @@
 	
 </div>
 
+  <div class="vid-c">
+    <video autoplay muted loop >
+      <source src="/images/wv.mp4">
+    </video>
+    <div class="txt-v">
+      <h2>Enjoy Latest Content !</h2>
+    <a href="#TV" class="scroll-down" address="true"></a>
+    </div>
+  </div>
+
+
+<div class="container-fluid" id="TV">
+  <h1>TV SHOWS</h1>
+	<div class="row dxw ">
+		<div class="MultiCarousel " data-items="1,2,3,3" data-slide="1" id="MultiCarousel"  data-interval="500">
+            <div class="MultiCarousel-inner">
+               
+                <a href="./tv.html"><div class="item lol">
+                  <div class="pad15">
+                    <img src="./images/cat.jpg" alt="">
+                  </div>
+                  <h2>Harry and the cat</h2>
+              </div></a>
+                <a href="./tv.html"><div class="item lol">
+                  <div class="pad15">
+                    <img src="./images/raven.jpg" alt="">
+                  </div>
+                  <h2>raven wing</h2>
+              </div></a>
+                <a href="./tv.html">
+                  <div class="item lol">
+                    <div class="pad15">
+                      <img src="./images/art.jpg" alt="">
+                    </div>
+                    <h2>art of arts</h2>
+                </div>
+                </a>
+                <a href="./tv.html"><div class="item lol">
+                  <div class="pad15">
+                    <img src="./images/lifevan.jpg" alt="">
+                  </div>
+                  <h2>life is fair</h2>
+              </div></a>
+                <a href="./tv.html"><div class="item lol">
+                  <div class="pad15">
+                    <img src="./images/robots.jpg" alt="">
+                  </div>
+                  <h2>robootts</h2>
+              </div></a>
+              <a href="./tv.html"><div class="item lol">
+                <div class="pad15">
+                    <img src="./images/desart ship.jpg" alt="">
+                    
+                </div>
+                <h2>Wars after peace</h2>
+            </div></a>
+              <a href="./tv.html"><div class="item lol">
+                <div class="pad15">
+                    <img src="./images/lightflight.jpg" alt="">
+                    
+                </div>
+                <h2>Past Extrem</h2>
+            </div></a>
+              <a href="./tv.html"><div class="item lol">
+                <div class="pad15">
+                    <img src="./images/fight.jpg" alt="">
+                    
+                </div>
+                <h2>The fight of Tommorow</h2>
+            </div></a>
+                
+                
+               
+            </div>
+            <button class="btn btn-warning leftLst"><</button>
+            <button class="btn btn-warning rightLst">></button>
+        </div>
+	</div>
+	
+</div>
       
     <button onclick="topFunction()" id="totoppls" title="Go to top"><i class="fas fa-arrow-up"></i></button>
     
@@ -152,7 +237,7 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title text-uppercase" id="exampleModalLabel">contact me via <span>e-mail</span></h5>
+          <h5 class="modal-title text-capitalize" id="exampleModalLabel">Subscribe to get the best content</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -167,13 +252,14 @@
               <label for="email"></label>
               <input type="email" id="email" name="email" placeholder="Enter your Email">
             </div>
-  
-            <!-- massage -->
-            <div class="form-group ms">
-              <label for="massage"></label>
-              <textarea name="massage" id="massage" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+            <div class="form-group em" style="display: flex">
+              <label for="password"></label>
+              <input type="password" id="password" name="password" placeholder="Enter your password">
             </div>
-            <button type="submit">Submit</button>
+            
+  
+    
+            <button type="Subscribe">Submit</button>
           </form>
         </div>
     

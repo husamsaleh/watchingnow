@@ -6,7 +6,9 @@
     --secondary:#ffbf00;
     --secondary-dark:#b88a01;
 }
-
+html {
+    scroll-behavior: smooth;
+  }
 *{
     padding: 0;
     margin: 0;
@@ -55,6 +57,20 @@ nav{
         background-color: var(--main-color); /* Add a dark-grey background on hover */
     }
   }
+  .search{
+    input{
+        width: 400px;
+        padding: 10px;
+        border-radius: 0;
+        background-color: rgba(0, 0, 0, 0.61);
+        border: 1px rgba(255, 255, 255, 0.247) solid;
+        margin-right: 50px;
+        &::placeholder{
+            color: var(--secondary);
+        }
+        
+    }
+  }
 
   .carousel-item{
     
@@ -66,23 +82,107 @@ nav{
 
   }
 
-  #movies{
+  #movies, #TV{
     position: relative;
-    
+   
     h1{
         color: var(--secondary);
         text-align: center;
         position: absolute;
-        top: 100px;
+        top: 140px;
         left: 50%;
         transform: translateX(-50%) ;
         font-size:56px;
      
+        
        
         
         
     }
+    
   }
+  .vid-c{
+    position: relative;
+    video{
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        
+      }
+      .txt-v{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) ;
+        z-index: 222;
+        text-align: center;
+        align-content: center;
+      }
+      h2{
+        font-size: 62px;
+        z-index: 222;
+        position: relative;
+        color: white;
+        text-shadow: 0px 0px 3px var(--secondary) ;
+        
+      }
+      .scroll-down {
+        opacity: 1;
+        -webkit-transition: all .5s ease-in 3s;
+        transition: all .5s ease-in 3s;
+      }
+      
+      .scroll-down {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border: 2px solid #FFF;
+        background-size: 14px auto;
+        border-radius: 50%;
+        z-index: 2;
+        -webkit-animation: bounce 2s infinite 2s;
+        animation: bounce 2s infinite 2s;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+        transform: scale(1)
+      }
+      
+      .scroll-down:before {
+          position: absolute;
+          top: calc(50% - 8px);
+          left: calc(50% - 6px);
+          transform: rotate(-45deg);
+          display: block;
+          width: 12px;
+          height: 12px;
+          content: "";
+          border: 2px solid white;
+          border-width: 0px 0 2px 2px;
+      }
+      
+      @keyframes bounce {
+        0%,
+        100%,
+        20%,
+        50%,
+        80% {
+          -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+          transform: translateY(0);
+        }
+        40% {
+          -webkit-transform: translateY(-10px);
+          -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
+        }
+        60% {
+          -webkit-transform: translateY(-5px);
+          -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
+        }
+      }
+  }
+  
   .dxw{
     margin: auto;
     width: 70%;
@@ -136,6 +236,11 @@ nav{
                 text-align: center;
 
                 transition: 1s all ease-in-out;
+                h2{
+                    &:hover{
+                        color: var(--secondary) !important;
+                    }
+                }
                 
                 img{
                     object-fit: cover;
@@ -156,4 +261,18 @@ nav{
               }
         }
     
+        .modal-body{
+            input{
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+            button{
+                background: var(--secondary);
+                color: var(--main);
+                border: none;
+                padding: 5px;
+                border-radius: 4px ;
+            }
+        }
   

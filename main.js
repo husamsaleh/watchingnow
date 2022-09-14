@@ -125,7 +125,12 @@ document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
 
-
+$(function() {
+    $('.scroll-down').click (function() {
+      $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
+      return false;
+    });
+  });
 
       
     //   window.onload = function () {
