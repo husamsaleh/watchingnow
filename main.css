@@ -1,8 +1,8 @@
 :root {
   --white: #ffffff;
   --main: black;
-  --secondary:#ffbf00;
-  --secondary-dark:#b88a01;
+  --secondary: #ffbf00;
+  --secondary-dark: #b88a01;
 }
 
 .navbar-toggler-icon {
@@ -117,10 +117,12 @@ nav {
   width: 100%;
 }
 
-#movies, #TV {
+#movies,
+#TV {
   position: relative;
 }
-#movies h1, #TV h1 {
+#movies h1,
+#TV h1 {
   color: var(--secondary);
   text-align: center;
   font-size: 56px;
@@ -258,9 +260,10 @@ nav {
   width: 375px;
 }
 
-.MultiCarousel .leftLst, .MultiCarousel .rightLst {
+.MultiCarousel .leftLst,
+.MultiCarousel .rightLst {
   position: absolute;
-  top: calc(40% - 40px);
+  top: calc(55% - 40px);
 }
 
 .MultiCarousel .leftLst {
@@ -271,7 +274,8 @@ nav {
   right: 12px;
 }
 
-.MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over {
+.MultiCarousel .leftLst.over,
+.MultiCarousel .rightLst.over {
   pointer-events: none;
   background: #ccc;
 }
@@ -391,7 +395,8 @@ nav {
     font-size: 12px;
   }
 
-  h2, h1 {
+  h2,
+h1 {
     font-size: 20px !important;
   }
 
