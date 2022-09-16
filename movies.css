@@ -6,6 +6,9 @@
 body {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  
 }
 
 #notfound {
@@ -39,12 +42,8 @@ body {
 
 .notfound .notfound-404 h1 {
   font-family: 'Montserrat', sans-serif;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50% , -50%);
-      -ms-transform: translate(-50% , -50%);
-          transform: translate(-50% , -50%);
+  
+ 
   font-size: 224px;
   font-weight: 900;
   margin-top: 0px;
@@ -59,9 +58,7 @@ body {
 
 .notfound .notfound-404 h2 {
   font-family: 'Montserrat', sans-serif;
-  position: absolute;
-  left: 0;
-  right: 0;
+  
   top: 110px;
   font-size: 42px;
   font-weight: 700;
@@ -75,6 +72,7 @@ body {
 .notfound a {
   font-family: 'Montserrat', sans-serif;
   display: inline-block;
+  position: relative;
   text-transform: uppercase;
   color: #ffbf00;
   text-decoration: none;
@@ -101,4 +99,19 @@ body {
   .notfound .notfound-404 h1 {
       font-size: 182px;
   }
+}
+
+@media screen and (max-width:600px) {
+  
+.notfound .notfound-404 h1 {
+  font-size: 82px;
+  left: 45%;
+  letter-spacing: -5px;
+}
+.notfound .notfound-404 h2 {
+  font-size: 32px;
+  left: 20px;
+  right: auto;
+  
+}
 }
