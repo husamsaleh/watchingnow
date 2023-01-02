@@ -354,26 +354,21 @@ nav {
   .search {
     margin-right: 10px;
   }
-
   .dxw {
     width: 100%;
   }
-
   .navbar-brand {
     font-size: 28px;
   }
-
   .carousel-item img {
     height: 100vh;
     -o-object-fit: contain;
        object-fit: contain;
     width: 100%;
   }
-
   .nav-item a {
     font-size: 14px;
   }
-
   .footer button {
     top: 35%;
     left: 17%;
@@ -394,12 +389,10 @@ nav {
     padding: 18px;
     font-size: 12px;
   }
-
   h2,
 h1 {
     font-size: 20px !important;
   }
-
   .navbar {
     background-color: rgba(0, 0, 0, 0.551);
     width: 107%;
@@ -407,30 +400,24 @@ h1 {
   .navbar .navbar-brand {
     font-size: 18px;
   }
-
   .carousel {
     margin-top: 25px;
   }
-
   .carousel-item img {
     height: 300px;
     -o-object-fit: contain;
        object-fit: contain;
     width: 100%;
   }
-
   .search {
     margin-top: 50px;
   }
-
   .MultiCarousel .MultiCarousel-inner .item {
     margin-right: 5px;
   }
-
   .dxw {
     height: 65vh;
   }
-
   .carousel-item img {
     height: auto;
     -o-object-fit: cover;
