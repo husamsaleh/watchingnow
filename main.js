@@ -10,42 +10,6 @@ $(document).ready(function () {
         else
             click(1, this)
     });
-    let isDragging = false;
-    let currentX;
-    let initialX;
-    let xOffset = 0;
-
-    itemsDiv.addEventListener("mousedown", dragStart);
-    itemsDiv.addEventListener("mouseup", dragEnd);
-    itemsDiv.addEventListener("mousemove", drag);
-
-    function dragStart(e) {
-        initialX = e.clientX - xOffset;
-
-        isDragging = true;
-    }
-
-    function dragEnd(e) {
-        initialX = currentX;
-
-        isDragging = false;
-    }
-
-    function drag(e) {
-        if (isDragging) {
-            e.preventDefault();
-            currentX = e.clientX - initialX;
-
-            xOffset = currentX;
-
-            setTranslate(currentX, 0, itemsDiv);
-        }
-    }
-
-    function setTranslate(xPos, yPos, el) {
-        el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
-    }
-
 
     ResCarouselSize();
 
@@ -142,33 +106,33 @@ $(document).ready(function () {
 });
 
 mybutton = document.getElementById("totoppls");
-window.onscroll = function () { scrollFunction() };
+window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 560 || document.documentElement.scrollTop > 560) {
-        mybutton.style.display = "block";
+if (document.body.scrollTop > 560 || document.documentElement.scrollTop > 560) {
+mybutton.style.display = "block";
 
-    } else {
-        mybutton.style.display = "none";
+} else {
+mybutton.style.display = "none";
 
-    }
+}
 }
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
 
-$(function () {
-    $('.scroll-down').click(function () {
-        $('html, body').animate({ scrollTop: $('section.ok').offset().top }, 'slow');
-        return false;
+$(function() {
+    $('.scroll-down').click (function() {
+      $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
+      return false;
     });
-});
+  });
 
-
+      
     //   window.onload = function () {
     //       document.addEventListener("contextmenu", function (e) {
     //           e.preventDefault();
